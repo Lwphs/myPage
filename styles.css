@@ -11,6 +11,7 @@ main {
 }
 header {
     position: fixed;
+    top: 0px;
     box-sizing: border-box;
     width: 100%;
     box-shadow: 0px 3px 3px rgb(0 0 0 / 40%);
@@ -36,4 +37,9 @@ header {
 ul {
     list-style: none;
 }
-  
+li:hover {
+  color: rgb(255    79    0);
+}
+#contactMe {
+  width: 90px;
+} 
