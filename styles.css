@@ -68,19 +68,22 @@ article:first-child {
     position: relative;
     top: 10vh;
     width: 600px;
+    z-index: 2; /* Lower than the container, if necessary */
+    pointer-events: none;
 }
 #presentationCard {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 35%;
+    grid-template-columns: 1fr 35%;
     grid-template-rows:  60% 20% 1fr;
     align-items: center;
-    
 }
 .contacts {
+    position: relative;
     display: flex;
-    justify-content: space-evenly;
-    padding: 0px;
-    margin: 20px 0 0 0;
+    flex-direction: column;
+    z-index: 10;
+    top: -7vh;
+    left: 40vw;
 }
 #myName {
     grid-column: 1 / span 3;
@@ -93,6 +96,28 @@ article:first-child {
     align-self: self-start;
     
 }
+/* Credits to Hyperplexed on YT and my brother for helping me on this nightmare */
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(23, 1fr);
+    grid-template-columns: repeat(90, 1fr);
+    z-index: 1; /* Ensure tiles are higher in stacking order */
+}
+
+.tile {  
+    border: 1px solid rgb(0 0 0 / 15%);
+    transition: background-color 1500ms;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.tile:hover {
+    background-color: rgb(var(--orange-rgb));
+    transition-duration: 0ms;
+}
+
 article:nth-child(2) {
     position: relative;
     top: 10vh;
@@ -107,25 +132,4 @@ article:nth-child(3) {
 footer {
     position: relative;
     bottom: -400px;
-}
-/* Credits to Hyperplexed on YT and my brother for helping me on this nightmare */
-#container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: repeat(80, 1fr);
-    grid-template-columns: repeat(90, 1fr);
-    
-}
-  
-.tile {  
-    border: 1px solid rgb(0 0 0 / 15%);
-    transition: background-color 1500ms;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-.tile:hover {
-    background-color: rgb(var(--orange-rgb));
-     transition-duration: 0ms;
 }
