@@ -1,5 +1,6 @@
 :root {
     --background-rgb: 255 255 255;
+    --orange-rgb: 255 79 0;
     font-family: "Space Mono", serif;
     font-weight: 100;
     font-style: normal; 
@@ -7,7 +8,14 @@
 /* Literally just to remove a single margin on left side lol */
 body {
     margin: 0px;
-    position: absolute;
+    padding: 0px;
+    background: rgb(var(--background-rgb)); 
+    overflow-x: hidden; 
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 main {
     margin: 0px 20%;
@@ -34,7 +42,7 @@ header {
     justify-content: space-between;
     padding-left: 0px;
     text-align: center;
-    margin: 4px 0;
+    margin: 15px 0;
 }
 #info {
     display: grid;
@@ -47,7 +55,7 @@ ul {
     list-style: none;
 }
 li:hover {
-    color: rgb(255 79 0);
+    color: rgb(var(--orange-rgb));
 }
 #contactMe {
     width: 180px;
@@ -99,4 +107,25 @@ article:nth-child(3) {
 footer {
     position: relative;
     bottom: -400px;
+}
+/* Credits to Hyperplexed on YT and my brother for helping me on this nightmare */
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(80, 1fr);
+    grid-template-columns: repeat(90, 1fr);
+    
+}
+  
+.tile {  
+    border: 1px solid rgb(0 0 0 / 15%);
+    transition: background-color 1500ms;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.tile:hover {
+    background-color: rgb(var(--orange-rgb));
+     transition-duration: 0ms;
 }
