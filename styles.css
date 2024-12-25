@@ -10,7 +10,8 @@ body {
     margin: 0px;
     padding: 0px;
     background: rgb(var(--background-rgb)); 
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    min-height: 100vh; 
 }
 * {
     box-sizing: border-box;
@@ -20,7 +21,7 @@ body {
 main {
     margin: 0px 20%;
     position: relative;
-    top: 50px;
+    top: 140px;
 }
 
 /* ----------------
@@ -66,24 +67,22 @@ Presentation card things
 ----------------------------*/
 article:first-child {
     position: relative;
-    top: 10vh;
-    width: 600px;
-    z-index: 2; /* Lower than the container, if necessary */
-    pointer-events: none;
+    width: 90%;
+    max-width: 600px;
+    z-index: 1; 
+    
+}
+.contacts {
+    display: flex;
+    z-index: 10;
+    gap: 20px
+    
 }
 #presentationCard {
     display: grid;
     grid-template-columns: 1fr 35%;
     grid-template-rows:  60% 20% 1fr;
     align-items: center;
-}
-.contacts {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-    top: -7vh;
-    left: 40vw;
 }
 #myName {
     grid-column: 1 / span 3;
@@ -99,15 +98,15 @@ article:first-child {
 /* Credits to Hyperplexed on YT and my brother for helping me on this nightmare */
 #container {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
     display: grid;
-    grid-template-rows: repeat(23, 1fr);
     grid-template-columns: repeat(90, 1fr);
-    z-index: 1; /* Ensure tiles are higher in stacking order */
+    grid-template-rows: repeat(16, 1fr);
+    z-index: 0;
 }
 
-.tile {  
+.tile {
     border: 1px solid rgb(0 0 0 / 15%);
     transition: background-color 1500ms;
     height: 1.5rem;
@@ -119,17 +118,17 @@ article:first-child {
 }
 
 article:nth-child(2) {
-    position: relative;
     top: 10vh;
     width: 500px;
 }
-
 article:nth-child(3) {
-    position: relative;
-    top: 10vh;
     width: 500px;
 }
 footer {
     position: relative;
-    bottom: -400px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px  #79797959 solid;
+    padding: 20px;
+    font-size: 0.7rem;
 }
