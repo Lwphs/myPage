@@ -81,8 +81,9 @@ article:first-child {
 #presentationCard {
     display: grid;
     grid-template-columns: 1fr 35%;
-    grid-template-rows:  60% 20% 1fr;
+    grid-template-rows:  30% 25% 1fr;
     align-items: center;
+    height: 200px;
 }
 #myName {
     grid-column: 1 / span 3;
@@ -94,6 +95,10 @@ article:first-child {
     grid-column: 1 / span 2;
     align-self: self-start;
     
+}
+section {
+    grid-column: 1 / -1;
+    align-self: flex-start;
 }
 /* Credits to Hyperplexed on YT and my brother for helping me on this nightmare */
 #container {
@@ -116,10 +121,26 @@ article:first-child {
     background-color: rgb(var(--orange-rgb));
     transition-duration: 0ms;
 }
-
-article:nth-child(2) {
+#articleProjects{
+    margin: 3vh 0;
+}
+#Projects {
+    display: flex;
     top: 10vh;
     width: 500px;
+    gap: 20%;
+}
+.projectShow {
+    box-sizing: content-box;
+    display: block;
+    border: 1px #79797959 solid;
+    border-radius: 10px;
+    height: 30vh;
+    width: 90%;
+    padding: 10px;
+}
+#projectsTitle {
+    margin-bottom: 3vh;
 }
 article:nth-child(3) {
     width: 500px;
@@ -128,7 +149,7 @@ footer {
     position: relative;
     margin-top: 50px;
     text-align: center;
-    border-top: 1px  #79797959 solid;
+    border-top: 1px #79797959 solid;
     padding: 20px;
     font-size: 0.7rem;
 }
