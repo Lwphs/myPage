@@ -21,13 +21,13 @@ body {
 main {
     margin: 0px 20%;
     position: absolute;
-    top: 400px;
+    top: 431px;
     
 }
 
-/* ----------------
-    Header things 
-------------------*/
+/* --------------------------------------------------
+                    Header things 
+-----------------------------------------------------*/
 header {
     position: fixed;
     top: 0px;
@@ -60,9 +60,9 @@ ul {
     width: 180px;
 }
 
-/* ---------------------------
-Presentation card things
-----------------------------*/
+/* ---------------------------------------------------
+                Presentation card things
+-------------------------------------------------------*/
 #titleName {
     position: relative;
     top: 150px;
@@ -74,7 +74,7 @@ Presentation card things
     
 }
 .contacts {
-    margin-top: 55px;
+    margin-top: 5vh;
     display: flex;
     z-index: 10;
     gap: 50px;
@@ -90,16 +90,19 @@ Presentation card things
     grid-column: 1 / span 3;
     font-size: 3em;
     margin: 0;
+    text-shadow: rgba(0, 0, 0, 0.295) 0px 2px 4px;
 }
 #backendDev {
     margin: 0;
     grid-column: 1 / span 2;
     align-self: self-start;
+    text-shadow: rgb(0, 0, 0, 0.295) 0px 2px 4px;
     
 }
-section {
+#description {
     grid-column: 1 / -1;
     align-self: flex-start;
+    text-shadow: rgb(0, 0, 0, 0.295) 0px 2.5px 3px;
 }
 
 /*------------------------------------------------------------------------------ 
@@ -126,28 +129,30 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     transition-duration: 0ms;
 }
 
-/*------------
-    main
-------------*/
+/*-------------------------------------------------
+                        main
+----------------------------------------------------*/
 #articleProjects{
-    margin: 5vh 0;
-    padding: 5vh 0;
+    margin: 4vh 0;
+    padding: 4vh 0;
     border-top: 1px #79797959 solid;
 }
 #Projects {
     display: flex;
     top: 10vh;
-    width: 500px;
-    gap: 20px;
+    width: 100%;
+    gap: 2.5%;
 }
 .projectShow {
     box-sizing: content-box;
     display: block;
     border: 1px #79797959 solid;
     border-radius: 10px;
-    height: 400px;
-    width: 400px;
+    height: 50vh;
+    width: 100%;
     padding: 10px;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
 }
 #projectsTitle {
     margin-bottom: 3vh;
@@ -164,14 +169,22 @@ footer {
     font-size: 0.7rem;
 }
 
-/*transitions*/
+/*-------------------------------------------------------
+                        transitions
+---------------------------------------------------------*/
 li:hover {
     color: rgb(var(--orange-rgb));
     transition: color 0.2s ease-in-out;
 }
+.contacts li a img {
+    transition: all 0.2s ease-in-out;
+}
 .contacts li a:hover img {
     filter: invert(37%) sepia(100%) saturate(2698%) brightness(100%) contrast(109%);
     transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
     
+}
+.projectShow:hover {
+    border: 1px rgba(100, 100, 100, 0.534) solid;
+    transform: scale(1.004);   
 }
