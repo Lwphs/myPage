@@ -5,7 +5,7 @@
     font-weight: 100;
     font-style: normal; 
 }
-/* Literally just to remove a single margin on left side lol */
+
 body {
     margin: 0px;
     padding: 0px;
@@ -20,8 +20,9 @@ body {
 }
 main {
     margin: 0px 20%;
-    position: relative;
-    top: 140px;
+    position: absolute;
+    top: 400px;
+    
 }
 
 /* ----------------
@@ -65,14 +66,18 @@ li:hover {
 /* ---------------------------
 Presentation card things
 ----------------------------*/
-article:first-child {
+#titleName {
     position: relative;
+    top: 150px;
+    left: 20%;
     width: 90%;
     max-width: 600px;
-    z-index: 1; 
+    z-index: 9;
+    pointer-events: none; 
     
 }
 .contacts {
+    margin-top: 80px;
     display: flex;
     z-index: 10;
     gap: 20px
@@ -100,15 +105,20 @@ section {
     grid-column: 1 / -1;
     align-self: flex-start;
 }
-/* Credits to Hyperplexed on YT and my brother for helping me on this nightmare */
+
+/*------------------------------------------------------------------------------ 
+Credits to Hyperplexed on YT and my brother for helping me on this nightmare 
+-----------------------------------------------------------------------------------*/
 #container {
     position: absolute;
     top: 0;
     left: 0;
     display: grid;
-    grid-template-columns: repeat(90, 1fr);
+    width: 100vw;
+    grid-template-columns: repeat(150, 1fr);
     grid-template-rows: repeat(16, 1fr);
     z-index: 0;
+    
 }
 
 .tile {
@@ -122,21 +132,23 @@ section {
     transition-duration: 0ms;
 }
 #articleProjects{
-    margin: 3vh 0;
+    margin: 5vh 0;
+    padding: 5vh 0;
+    border-top: 1px #79797959 solid;
 }
 #Projects {
     display: flex;
     top: 10vh;
     width: 500px;
-    gap: 20%;
+    gap: 20px;
 }
 .projectShow {
     box-sizing: content-box;
     display: block;
     border: 1px #79797959 solid;
     border-radius: 10px;
-    height: 30vh;
-    width: 90%;
+    height: 400px;
+    width: 400px;
     padding: 10px;
 }
 #projectsTitle {
