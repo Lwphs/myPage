@@ -56,9 +56,6 @@ header {
 ul {
     list-style: none;
 }
-li:hover {
-    color: rgb(var(--orange-rgb));
-}
 #contactMe {
     width: 180px;
 }
@@ -77,11 +74,10 @@ Presentation card things
     
 }
 .contacts {
-    margin-top: 80px;
+    margin-top: 55px;
     display: flex;
     z-index: 10;
-    gap: 20px
-    
+    gap: 50px;
 }
 #presentationCard {
     display: grid;
@@ -117,10 +113,8 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     width: 100vw;
     grid-template-columns: repeat(150, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    z-index: 0;
-    
+    z-index: 0; 
 }
-
 .tile {
     border: 1px solid rgb(0 0 0 / 15%);
     transition: background-color 1500ms;
@@ -131,6 +125,10 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     background-color: rgb(var(--orange-rgb));
     transition-duration: 0ms;
 }
+
+/*------------
+    main
+------------*/
 #articleProjects{
     margin: 5vh 0;
     padding: 5vh 0;
@@ -164,4 +162,16 @@ footer {
     border-top: 1px #79797959 solid;
     padding: 20px;
     font-size: 0.7rem;
+}
+
+/*transitions*/
+li:hover {
+    color: rgb(var(--orange-rgb));
+    transition: color 0.2s ease-in-out;
+}
+.contacts li a:hover img {
+    filter: invert(37%) sepia(100%) saturate(2698%) brightness(100%) contrast(109%);
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    
 }
