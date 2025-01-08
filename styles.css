@@ -132,7 +132,10 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
 /*-------------------------------------------------
                         main
 ----------------------------------------------------*/
-#articleProjects{
+/*-------------------------------------------------
+                      projects
+----------------------------------------------------*/
+.articleSizing {
     margin: 4vh 0;
     padding: 4vh 0;
     border-top: 1px #79797959 solid;
@@ -153,12 +156,26 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     background-color: white;
     transition: all 0.2s ease-in-out;
 }
-#projectsTitle {
+.articleTitle {
     margin-bottom: 3vh;
 }
+
+/*-------------------------------------------------
+                      Skills
+----------------------------------------------------*/
 article:nth-child(3) {
     width: 500px;
 }
+#skillList img {
+    width: 40px;
+    height: 40px;
+}
+
+#skillList {
+    display: flex;
+    justify-content: space-between;
+}
+
 footer {
     position: relative;
     margin-top: 50px;
