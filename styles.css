@@ -163,19 +163,14 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
 /*-------------------------------------------------
                       Skills
 ----------------------------------------------------*/
-article:nth-child(3) {
-    width: 500px;
-}
 #skillList img {
     width: 40px;
     height: 40px;
 }
-
 #skillList {
     display: flex;
     justify-content: space-between;
 }
-
 footer {
     position: relative;
     margin-top: 50px;
