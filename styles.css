@@ -141,13 +141,12 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     display: flex;
     top: 10vh;
     width: 100%;
-    gap: 2.5%;
+
 }
 .projectShow {
     box-sizing: content-box;
     display: block;
     border: 1px #79797959 solid;
-    border-radius: 10px;
     height: 50vh;
     width: 100%;
     padding: 10px;
