@@ -74,7 +74,8 @@ ul {
     
 }
 .contacts {
-    margin-top: 5vh;
+    margin-top: 3vh;
+    padding-top: 10px;
     display: flex;
     z-index: 10;
     gap: 50px;
@@ -144,6 +145,7 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     display: flex;
     top: 10vh;
     width: 100%;
+    gap: 1vw;
 
 }
 .projectShow {
