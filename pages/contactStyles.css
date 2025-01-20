@@ -19,7 +19,7 @@ body {
     padding: 0;
 }
 main {
-    margin: 0px 20%;
+    margin: 0px 25%;
     position: absolute;
 }
 /* --------------------------------------------------
@@ -51,7 +51,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    padding: 0px;
     text-align: center;
 }
 ul {
@@ -59,4 +58,59 @@ ul {
 }
 #contactMe {
     width: 180px;
+}
+/*-------------------------------------------------
+                        main
+----------------------------------------------------*/
+
+.flexer {
+    position: relative;
+    top: 15vh;
+    border: 1px #79797959 solid;
+    border-radius: 10px;
+    padding: 40px 20px 20px 20px;
+
+}
+.contacts {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    margin-bottom: 5vh;  
+}
+.contacts img {
+    width: 4rem;
+}
+.textcontact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text {
+    font-weight: bold;
+}
+#little {
+    font-size: 0.8rem;
+    padding-top: 0.6vh;
+}
+footer {
+    position: relative;
+    top: 30vh;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px #79797959 solid;
+    padding: 20px;
+    font-size: 0.7rem;
+}
+.contacts li a img {
+    transition: all 0.2s ease-in-out;
+}
+
+.list li a:hover {
+    color: rgb(var(--orange-rgb));
+    transition: color 0.2s ease-in-out;
+}
+.contacts li a:hover img {
+    filter: invert(37%) sepia(100%) saturate(2698%) brightness(100%) contrast(109%);
+    transform: scale(1.05);
+    
 }
