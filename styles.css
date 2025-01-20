@@ -46,6 +46,10 @@ header {
     text-align: center;
     margin: 15px 0;
 }
+.list li a {
+    text-decoration: none; 
+    color: black;
+}
 #info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -238,7 +242,7 @@ footer {
 /*-------------------------------------------------------
                         transitions
 ---------------------------------------------------------*/
-li:hover {
+.list li a:hover {
     color: rgb(var(--orange-rgb));
     transition: color 0.2s ease-in-out;
 }
