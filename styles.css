@@ -254,3 +254,10 @@ li:hover {
     border: 1px rgba(100, 100, 100, 0.534) solid;
     transform: scale(1.004);   
 }
+#skillList li:hover img {
+    transform: scale(1.05);
+
+}
+#skillList li img {
+    transition: all 0.2s ease-in-out;
+}
