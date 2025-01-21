@@ -63,3 +63,15 @@ ul {
 /* --------------------------------------------------
                     Main things 
 -----------------------------------------------------*/
+.aboutMe {
+    position: relative;
+    top: 11vh;
+}
+.introduction p {
+    margin: 2vh 0;
+}
+.experience {
+    position: relative;
+    top: 15vh;
+}
+
