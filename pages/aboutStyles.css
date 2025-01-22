@@ -152,6 +152,9 @@ footer {
     padding: 0 2vw 6vh 0;
 }
 .experienceItemList2:nth-child(2) {
+    padding: 0 2vw 6vh 0;
+}
+.experienceItemList2:nth-child(3) {
     padding: 0 2vw 0 0;
 }
 .decorativeCircle2 {
