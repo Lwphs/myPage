@@ -10,8 +10,7 @@ body {
     margin: 0px;
     padding: 0px;
     background: rgb(var(--background-rgb)); 
-    overflow-x: hidden;
-    min-height: 100vh; 
+    overflow-x: hidden; 
 }
 * {
     box-sizing: border-box;
@@ -20,9 +19,6 @@ body {
 }
 main {
     margin: 0px 20%;
-    position: absolute;
-    top: 431px;
-    
 }
 
 /* --------------------------------------------------
@@ -38,6 +34,9 @@ header {
     backdrop-filter: blur(6px);
     z-index: 10;
     padding: 0px 30px;
+}
+a.button1 {
+    display: none;
 }
 .list {
     display: flex;
@@ -60,7 +59,7 @@ header {
 ul {
     list-style: none;
 }
-#contactMe {
+.contactMe {
     width: 180px;
 }
 
@@ -68,20 +67,15 @@ ul {
                 Presentation card things
 -------------------------------------------------------*/
 #titleName {
-    position: relative;
-    top: 150px;
-    left: 20%;
-    width: 90%;
+    margin-top: 150px;
+    padding: 0px 20%; 
     max-width: 1100px;
-    z-index: 9;
     pointer-events: none; 
-    
 }
 .contacts {
-    margin-top: 3vh;
+    margin-top: 130px;
     padding-top: 10px;
     display: flex;
-    z-index: 10;
     gap: 50px;
 }
 #presentationCard {
@@ -119,10 +113,9 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     top: 0;
     left: 0;
     display: grid;
-    width: 100vw;
     grid-template-columns: repeat(150, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    z-index: 0; 
+    z-index: -1; 
 }
 .tile {
     border: 1px solid rgb(0 0 0 / 15%);
@@ -149,7 +142,6 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
 #Projects {
     display: flex;
     top: 10vh;
-    width: 100%;
     gap: 1vw;
 
 }
@@ -200,7 +192,7 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
 .projectShow div {
     box-sizing: border-box;
     position: relative;
-    top: 75%;
+    top: 70%;
     padding: 0 5%;
     z-index: 2;
     opacity: 1;
@@ -233,8 +225,7 @@ Credits to Hyperplexed on YT and my brother for helping me on this nightmare
     justify-content: space-between;
 }
 footer {
-    position: relative;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     border-top: 1px #79797959 solid;
     padding: 20px;
@@ -266,4 +257,46 @@ footer {
 }
 #skillList li img {
     transition: all 0.2s ease-in-out;
+}
+/*-------------------------------------------------------
+                        responsive
+---------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    main {
+        margin: 0px 10%;
+    }
+    #Projects {
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+    #container {
+        overflow: hidden;
+    }
+    .list {
+        display: none;
+    }
+    a.button1 {
+        text-decoration: none;
+    }
+    header {
+        height: 70px;
+    }
+    #titleName {
+        padding: 0px 10%; 
+    }
+    .projectShow {
+        height: 350px;
+        min-height: 200px;
+    }
+    #myName {
+        font-size: 2.5em;
+    }
+    #backendDev {
+        font-size: 1.5em;
+    }
+    #description {
+        font-size: 0.8em;
+    }
+        
 }
