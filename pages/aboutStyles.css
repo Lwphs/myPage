@@ -85,10 +85,10 @@ ul {
     position: relative;
 }
 .experienceItemList {
-    padding: 0 0 6vh 2vw;
+    padding: 0 0 6vh 15px;
 }
 .experienceItemList:nth-child(2) {
-    padding: 0 0 0 2vw;
+    padding: 0 0 0 15px;
 }
 .decorativeCircle {
     height: 10px;
@@ -149,13 +149,13 @@ footer {
     position: relative;
 }
 .experienceItemList2 {
-    padding: 0 2vw 6vh 0;
+    padding: 0 15px 6vh 0;
 }
 .experienceItemList2:nth-child(2) {
-    padding: 0 2vw 6vh 0;
+    padding: 0 15px 6vh 0;
 }
 .experienceItemList2:nth-child(3) {
-    padding: 0 2vw 0 0;
+    padding: 0 15px 0 0;
 }
 .decorativeCircle2 {
     height: 10px;
@@ -186,4 +186,19 @@ footer {
 }
 .experienceItemList2 .decorativeCircle2 {
     transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 460px) {
+    body {
+        font-size: 0.9rem;
+    }
+    main {
+        margin: 0px 5%;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    main {
+        margin: 0px 10%;
+    }
 }

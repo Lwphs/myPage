@@ -286,6 +286,9 @@ footer {
         height: 350px;
         min-height: 200px;
     }
+    .contacts {
+        justify-content: center;
+    }
         
 }
 @media screen and (max-width: 460px) {
@@ -302,9 +305,11 @@ footer {
     }
     #titleName {
         margin-top: 130px;
+        text-align: center;
     }
     #skillList img {
         width: 30px;
         height: 30px;
     }
+
 }
