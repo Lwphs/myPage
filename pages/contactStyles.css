@@ -4,6 +4,13 @@
     font-family: "Space Mono", serif;
     font-weight: 100;
     font-style: normal; 
+
+    --bar-width: 25px;
+    --bar-height: 5px;
+    --hamburger-gap: 4px;
+    --foreground: #333;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 body {
@@ -57,6 +64,12 @@ ul {
 }
 #contactMe {
     width: 180px;
+}
+.hamburger-menu {
+    display: none;
+}
+#endiablao{
+    display: none;
 }
 /*-------------------------------------------------
                         main
@@ -125,6 +138,9 @@ footer {
         margin-top: 5vh;
         margin-bottom: 3vh;
     }
+    .flexer {
+        margin-top: 100px;
+    }
 
 }
 @media screen and (max-width: 900px) {
@@ -134,5 +150,116 @@ footer {
     .info {
         display: none;
     }
+    .header {
+        display: none;
+    }
+/*-------------------------------------------------------
+                    hamburguer menu
+---------------------------------------------------------*/
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+    .hamburger-menu {
+      --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    
+      display: flex;
+      flex-direction: column;
+      gap: var(--hamburger-gap);
+      width: max-content;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+    
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+      border: 1px solid var(--background);
+      box-shadow: 0 0 0 1px var(--foreground);
+    }
+    
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+      content: "";
+      width: var(--bar-width);
+      height: var(--bar-height);
+      background-color: var(--foreground);
+      border-radius: 10px;
+      transform-origin: left center;
+      transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+    }
+    
+    .hamburger-menu input {
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      pointer-events: none;
+    }
+    
+    .hamburger-menu:has(input:checked)::before {
+      rotate: 45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / -2);
+    }
+    
+    .hamburger-menu:has(input:checked)::after {
+      rotate: -45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / 2);
+    }
+    
+    .hamburger-menu input:checked {
+      opacity: 0;
+      width: 0;
+    }
+    
+    .sidebar {
+      transition: translate var(--animation-timing);
+      translate: 0 -68%;
+      padding: 20px 30px;
+      position: fixed;
+      top: 0px;
+      box-sizing: border-box;
+      width: 100%;
+      box-shadow: 0px 3px 3px rgb(0 0 0 / 40%);
+      background-color: rgb(255 255 255 / 40%);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+    
+    #endiablao li {
+        padding: 2px 0;
+    }
 
+    #endiablao a {
+        text-decoration: none; 
+        color: black;
+    }
+
+    #endiablao {
+        transition: translate var(--animation-timing);
+        translate: 0 -100%;
+        display: block;
+    }
+
+    #endiablao a:hover {
+        color: rgb(var(--orange-rgb));
+        transition: color 0.2s ease-in-out;
+    }
+
+    .hamburger-menu:has(input:checked) + .sidebar {
+      translate: 0;
+    }
+
+    .hamburger-menu:has(input:checked) + .sidebar #endiablao {
+        translate: 0;
+    }
 }
