@@ -18,6 +18,7 @@ body {
     padding: 0px;
     background: rgb(var(--background-rgb)); 
     overflow-x: hidden; 
+    pointer-events: none;
 }
 * {
     box-sizing: border-box;
@@ -26,12 +27,14 @@ body {
 }
 main {
     margin: 0px 20%;
+    pointer-events: all;
 }
 
 /* --------------------------------------------------
                     Header things 
 -----------------------------------------------------*/
 .header {
+    pointer-events: all;
     position: fixed;
     top: 0px;
     box-sizing: border-box;
@@ -113,6 +116,7 @@ ul {
 Credits to Hyperplexed on YT and my brother for helping me on this nightmare 
 -----------------------------------------------------------------------------------*/
 #container {
+    pointer-events: all;
     position: absolute;
     top: 0;
     left: 0;
@@ -308,6 +312,7 @@ footer {
     .contacts {
         justify-content: center;
     }
+    
     .header {
         display: none;
     }
@@ -333,6 +338,7 @@ https://github.com/WebDevSimplified/css-only-hamburger-menu
       right: 20px;
       z-index: 100;
       cursor: pointer;
+      pointer-events: all;
     }
     
     .hamburger-menu:has(input:focus-visible)::before,
@@ -396,6 +402,7 @@ https://github.com/WebDevSimplified/css-only-hamburger-menu
     }
     
     #endiablao li {
+        pointer-events: all;
         padding: 2px 0;
     }
 
