@@ -79,9 +79,8 @@ ul {
                       projects
 ----------------------------------------------------*/
 .articleSizing {
-    margin: 4vh 0;
+    margin: 80px 0;
     padding: 4vh 0;
-    border-top: 1px #79797959 solid;
 }
 #Projects {
     position: relative;
