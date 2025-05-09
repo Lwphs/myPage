@@ -59,6 +59,12 @@ a.button1 {
     text-decoration: none; 
     color: black;
 }
+
+#cv img{
+    position: relative;
+    top: -7px;
+}
+
 #info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -311,6 +317,7 @@ footer {
     }
     .contacts {
         justify-content: center;
+        gap: 30px;
     }
     
     .header {
